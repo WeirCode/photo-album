@@ -8,7 +8,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header></header>
-    <h1>WEBSITE WORKING SO EASY</h1>
+    <div class="container">
+        <h1>Our Beautiful Journey Together</h1>
+        <div class="audio-container">
+            <audio controls>
+                <source src="your-audio-file.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="days-together">
+            <h2>Days Together: <span id="daysCount">Loading...</span></h2>
+        </div>
+        <div class="photo-gallery">
+            <img src="photo1.jpg" alt="Memory 1" class="photo-item">
+            <img src="photo2.jpg" alt="Memory 2" class="photo-item">
+            <img src="photo3.jpg" alt="Memory 3" class="photo-item">
+            <!-- Add more photos as needed -->
+        </div>
+        <div class="bottom-decor">
+            <img src="hydrangea.png" alt="Hydrangea" class="bottom-image">
+            <!-- Add more images if needed -->
+        </div>
+        
+    </div>
+    <script>
+        const startDate = new Date("2023-01-01"); // Change this to your anniversary date
+        const today = new Date();
+        function calculateDaysTogether(startDate, today) {
+            const timeDifference = today - startDate;
+            const daysTogether = Math.floor(timeDifference / (1000 * 3600 * 24)); // Convert milliseconds to days
+            document.getElementById("daysCount").textContent = daysTogether;
+        }
+        calculateDaysTogether(startDate, today);
+    </script>
 </body>
 </html>
