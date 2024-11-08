@@ -1,5 +1,13 @@
+.days-together{
+    border-radius: 4px;
+    border: #5a2d6e 2px solid;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
 .container {
-    width: 80%;
+    width: 98%;
     margin: 0 auto;
     padding: 20px;
     border: 5px solid #d5a6bd; /* Soft color for the border */
