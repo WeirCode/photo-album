@@ -4,54 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Love You</title>
+    <!-- Add your favicon here -->
     <link rel="icon" href="heart-icon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Linking to external CSS -->
 </head>
 <body>
-    <div class="container">
-        <h1>Yeone and Ethan</h1>
+    <div id="container">
+        <div id="page-title">
+            <h1>Happy Birthday, Baby!</h1>
+        </div>
+    <!-- Top Section (Header) -->
         <div id="top">
-            <div class="days-together">
-                <h2><span id="daysCount">Loading...</span></h2>
-            </div>
-            <div>
-                <div class="make-happy-container">
-                    <button id="makeMeHappy" class="make-happy-button">Make Me Happy</button>
-                </div> 
-            </div>
-            <div>
-                <div class="audio-container">
-                    <audio controls>
-                        <source src="your-audio-file.mp3" type="audio/mp3">
+        <!-- Left: Days Together -->
+        <div class="days-together">
+            <h2><span id="daysCount">Loading...</span> Days Together</h2>
+        </div>
+
+        <!-- Center: Make Me Happy Button -->
+        <div class="make-happy-container">
+            <button id="makeMeHappy" class="make-happy-button">Make Me Happy</button>
+        </div>
+
+        <!-- Right: Audio and Bucket List -->
+        <div class="audio-bucket-container">
+            <!-- Audio Player -->
+            <div class="audio-container">
+                <audio id="audioPlayer" controls>
+                    <source src="your-audio-file.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="bucket-list-container">
-                    <label for="bucketList">Bucket List</label>
-                    <select id="bucketList">
-                        <option value="travel">Travel the World</option>
-                        <option value="skydiving">Go Skydiving</option>
-                        <option value="beach">Visit a Beautiful Beach</option>
-                        <option value="concert">Attend a Concert Together</option>
-                        <option value="camping">Go Camping Under the Stars</option>
-                        <option value="paris">Visit Paris</option>
-                    </select>
-                </div>
+                </audio>
+                <button id="nextButton" class="skip-button">⏭</button>
+            </div>
+
+            <!-- Bucket List Dropdown -->
+            <div class="bucket-list-container">
+                <h3>To Do:</h3>
+                <select id="bucketList">
+                    <option>Birthday!</option>
+                    <option>See Aurora</option>
+                    <option>Hawaii</option>
+                    <option>Camping</option>
+                    <option>Going to Korea</option>
+                    <option>Dog!</option>
+                    <option>Stargazing</option>
+                    <option>Pottery</option>
+                    <option>Adventuring</option>
+                    <option>Concert</option>
+                    <option>Car Movie</option>
+                    <option>Movies</option>
+                </select>
             </div>
         </div>
-        <div class="photo-gallery">
-            <div class="photo-item" id="mainImage">
-                <img src="photo1.jpg" alt="Memory 1" class="image-item">
-            </div>
         </div>
-        <!-- PNG Hydrangea Images at the Bottom -->
-        <div class="bottom-decor">
-            <img src="hydrangea.png" alt="Hydrangea" class="bottom-image">
-            <img src="hydrangea.png" alt="Hydrangea" class="bottom-image">
-            <img src="hydrangea.png" alt="Hydrangea" class="bottom-image">
+        <div class="image-slider">
+            <img id="sliderImage" src="images/image4.jpg" alt="Cycling Image" />
         </div>
     </div>
+    <div class="bottom-image-container">
+        <img id="bottomImage" src="images/hydrangea.png" alt="">
     </div>
-    <script src="script.js"></script>
+    <div class="bottom-image-container2">
+        <img id="bottomImage2" src="images/lavender.png" alt="">
+    </div>
+    <script src="script.js"></script> <!-- Linking to external JS file -->
 </body>
 </html>

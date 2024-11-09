@@ -1,208 +1,254 @@
-.days-together{
-    border-radius: 4px;
-    border: #5a2d6e 2px solid;
+/* General body styles */
+html, body {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and borders in width and height calculation */
+    background: linear-gradient(to bottom, 
+        #121c2e, /* Dark blue sky */
+        #19263f,
+        #1c2b46,
+        #24395f,
+        #3b4c8d, /* Sunset transition (darker blue) */
+        #f66b39, /* Sunset orange */
+        #f8c471, /* Sunset pinkish color */
+        #2980b9 /* Water blue */
+    );
+    z-index: -1;
 }
-.top{
+#container {
     display: flex;
-    justify-content: space-between;
-}
-.container {
-    width: 98%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 5px solid #d5a6bd; /* Soft color for the border */
-    border-radius: 15px; /* Rounded corners */
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #5a2d6e; /* Deep purple, romantic tone */
-}
-
-.audio-container {
-    text-align: center;
-    margin-top: 20px;
-}
-.photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.photo-item {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.photo-item:hover {
-    transform: scale(1.05);
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0a1f44; /* Deep dark blue for the night sky */
-    background-image: url('starry-sky.png'); /* Optional background star image */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
-}
-
-.star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: white;
-    border-radius: 50%;
-    animation: twinkle 1.5s infinite alternate;
-}
-
-@keyframes twinkle {
-    0% { opacity: 0.7; }
-    100% { opacity: 1; }
-}
-/* Photo gallery styling */
-.photo-gallery {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-    position: relative;
-}
-
-.photo-item {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.photo-item img {
+    height: 100vh; /* Full screen height */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.photo-item:hover {
-    transform: scale(1.05);
-}
-
-/* Glowing effect for the middle image */
-#mainImage {
-    animation: glow 3s infinite ease-in-out;
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8);
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-    }
-}
-
-/* Bottom Hydrangea PNGs */
-.bottom-decor {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 30px;
-    left: 0;
-    right: 0;
+    border: 10px solid #d5a6bd; /* Border around the container */
+    border-radius: 20px; /* Rounded corners */
+    background: transparent;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding and borders don't cause overflow */
+    overflow: hidden; /* Prevents overflow */
     z-index: 10;
 }
-
-.bottom-image {
-    position: absolute;
-    width: 150px;
-    height: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    bottom: 0;
+button, .make-happy-button, .audio-container, .bucket-list-container, .image-slider {
+    position: relative;  /* Required for z-index to work */
+    z-index: 10;         /* Make sure content is on top of the image */
+}
+#page-title {
+    text-align: center;
+    padding: 0 0 20px 0;
+    width: 100%;
 }
 
-.bottom-image:hover {
-    opacity: 1;
+#page-title h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #d5a6bd; /* Soft pink color for the title */
 }
 
-/* Fixing positions around the center */
-.bottom-image:nth-child(1) {
-    left: 30px;
-    bottom: 20px;
+/* Top Section Container */
+#top {
+    display: flex; /* Use Flexbox to arrange items horizontally */
+    justify-content: space-between; /* Space out the left, center, and right sections */
+    align-items: center; /* Vertically center the items */
+    padding: 10px; /* Space inside the container */
+    gap: 10px; /* Space between sections */
 }
 
-.bottom-image:nth-child(2) {
-    right: 30px;
-    bottom: 20px;
+/* Left Section: Days Together */
+.days-together {
+    flex: 1; /* Takes up available space */
+    text-align: left;  /*Align content to the left */
 }
 
-.bottom-image:nth-child(3) {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-}
-.bucket-list-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+/* Days Together Heading */
+.days-together h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #d5a6bd;
 }
 
-.bucket-list-container label {
-    font-size: 1.2em;
-    color: #fff;
-    margin-right: 10px;
-}
-
-.bucket-list-container select {
-    font-size: 1.2em;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #d5a6bd; /* Match the border color to the theme */
-    background-color: #f5f5f5;
-    color: #333;
-    cursor: pointer;
-}
+/* Center Section: Make Me Happy Button */
 .make-happy-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    flex: 2; /* Takes up equal space as the left section */
+    text-align: center; /* Center the content inside */
 }
 
 .make-happy-button {
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-size: 1.5em;
-    background-color: #d5a6bd; /* Soft color that matches the theme */
-    color: white;
-    border: none;
+    color: #d5a6bd;
+    background: transparent;
+    border: 1px #d5a6bd dotted;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
+/* Hover effect for the button */
 .make-happy-button:hover {
-    background-color: #b57ea8; /* Darker shade when hovered */
+    border-color: #b57ea8; /* Change border color on hover */
+}
+
+/* Right Section: Audio and Bucket List */
+/* Audio Player Container */
+.audio-container {
+    margin-bottom: 10px;
+    width: 100%; /* Ensure full width but limit max size */
+    max-width: 400px; /* Limit the max width to make it smaller */
+}
+.audio-container{
+    display: flex;
+}
+/* Styling the audio player */
+.audio-container audio {
+    width: 100%; /* Ensure the audio player fills the container */
+    height: 40px; /* Set a smaller height for the audio player */
+}
+
+/* Style for Next Song Button */
+#nextButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    width: 1px;
+}
+
+/* Bucket List Dropdown */
+.bucket-list-container {
+    display: flex;
+    gap: 5px;
+    flex-direction: row; /* Stack the label and select vertically */
+    align-items: center; /* Align to the right */
+    color: #d5a6bd;
+}
+
+.bucket-list-container select {
+    font-size: 1em;
+    padding: 8px;
+    margin-top: 5px; /* Space between label and dropdown */
+    border-radius: 5px;
+    border: 2px solid #d5a6bd;
+    background: transparent;
+    color: #d5a6bd;
+    cursor: pointer;
+}
+
+/* Option styles */
+#bucketList option {
+    padding: 10px; /* Add padding to the options */
+}
+.image-slider {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style for the image itself */
+#sliderImage {
+    max-width: 45%;
+    height: auto;
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Optional: add a shadow effect */
+}
+#sliderImage:hover{
+    transition: 1s;
+    transform: scale(1.01);
+}
+.bottom-image-container {
+    position: fixed;
+    bottom: 30px;
+    left: -150px;
+    width: 60%; /* Make the image span the full width of the page */
+    z-index: 1;
+}
+
+/* Style for the image itself */
+#bottomImage {
+    width: 100%; /* Make the image span the full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    transform: translateY(60%); /* Increase size to make the image appear larger */
+}
+.bottom-image-container2 {
+    position: fixed;
+    bottom: 0px;
+    right: -100px;
+    width: 50%; /* Make the image span the full width of the page */
+    z-index: 1;
+}
+
+/* Style for the image itself */
+#bottomImage2 {
+    width: 100%; /* Make the image span the full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    transform: translateY(60%); /* Increase size to make the image appear larger */
+}
+
+/* Container for stars */
+/* Stars container (fixed position at the top) */
+/* Container for stars (fixed at the top of the page) */
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Style for individual stars */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%; /* Circular stars */
+    opacity: 0;
+    box-shadow: 0 0 60px 3px rgba(255, 255, 255, 0.8);  /* Glowing effect */
+    animation: twinkle 1.5s infinite alternate, star-movement 20s; /* Animation to simulate twinkling */
+}
+
+/* Vary the sizes of stars: larger, medium, and small */
+.star.big {
+    width: 5px;
+    height: 5px;
+    animation-duration: 2.5s;  /* Slow twinkle for larger stars */
+}
+
+.star.medium {
+    width: 4px;
+    height: 4px;
+    animation-duration: 1.8s;  /* Medium-speed twinkle for medium stars */
+}
+
+.star.small {
+    width: 2px;
+    height: 2px;
+    animation-duration: 1.2s;  /* Fast twinkle for smaller stars */
+}
+/* Keyframe animation for twinkling effect */
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* Optional: create random movement for the stars */
+@keyframes star-movement {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(var(--move-x), var(--move-y));
+    }
 }
