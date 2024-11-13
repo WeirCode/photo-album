@@ -279,12 +279,12 @@ button, .make-happy-button, .audio-container, .bucket-list-container, .image-sli
     #sliderImage {
         width: 100%;
         height: auto;
-        margin-top: 16px;
-        transform: scale(1.6);
+        margin-top: 14px;
+        transform: scale(1.22);
     }
     #sliderImage:hover{
         transition: 0.5s;
-        transform: scale(1.61);
+        transform: scale(1.24);
     }
     .bottom-image-container {
         left: -50px;
