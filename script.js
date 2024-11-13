@@ -1,5 +1,5 @@
 //days
-const startDate = new Date("2023-05-08");
+const startDate = new Date("2023-04-08");
 const today = new Date();
 function calculateDaysTogether(startDate, today) {
 const timeDifference = today - startDate;
@@ -18,6 +18,10 @@ window.onload = function() {
         'playlist/track6.mp3',
         'playlist/track7.mp3',
         'playlist/track8.mp3',
+        'playlist/track9.mp3',
+        'playlist/track10.mp3',
+        'playlist/track11.mp3',
+        'playlist/track12.mp3',
         // Add more tracks as needed
     ];
 

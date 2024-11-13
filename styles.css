@@ -252,3 +252,59 @@ button, .make-happy-button, .audio-container, .bucket-list-container, .image-sli
         transform: translate(var(--move-x), var(--move-y));
     }
 }
+
+@media (max-width: 600px) {
+    #page-title {
+        padding: 0 0 5px 0;
+    }
+    #page-title h1 {
+        font-size: 1.4em;
+    }
+    #top {
+        flex-direction: column;
+    }
+    .days-together h2 {
+        font-size: 1.2em;
+    }
+    .make-happy-button {
+        font-size: 1.2em;
+    }
+    .audio-container {
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+    .image-slider {
+        margin-top: 0px;
+    }
+    #sliderImage {
+        width: 100%;
+        height: auto;
+        margin-top: 16px;
+        transform: scale(1.6);
+    }
+    #sliderImage:hover{
+        transition: 0.5s;
+        transform: scale(1.61);
+    }
+    .bottom-image-container {
+        left: -50px;
+    }
+    .bottom-image-container2 {
+        bottom: 30px;
+        right: -25px;
+    }
+    
+    .star.big {
+        width: 3px;
+        height: 3px;
+    }
+    
+    .star.medium {
+        width: 2px;
+        height: 2px;
+    }
+    .star.small {
+        width: 1px;
+        height: 1px;
+    }
+}
