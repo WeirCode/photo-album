@@ -70,7 +70,7 @@ function setVariables(range){
         mode = "birthday";
         document.getElementById("title").textContent = "Happy Birthday Baby! 🎂🎉🎈";
     } else{
-        playlistCount = 0;
+        playlistCount = 12;
         backgroundEffect = "Stars";
         colorScheme = "Sunset";
         mode = "default";
