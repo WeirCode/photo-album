@@ -157,9 +157,9 @@ function createSnow(){
         snowContainer.appendChild(snow);
         setTimeout(() => {
             star.remove();
-        }, (speed + 5) * 1000);
+        }, 1000);
     }
-    setInterval(createNewSnowflake, 100);
+    setInterval(createNewSnowflake, 50);
 }
 function createAurora(){
 

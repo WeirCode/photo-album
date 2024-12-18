@@ -26,9 +26,9 @@ body.winter {
         #0d1930,
         #0f141f,
         #141722, 
-        #7c7670,
-        #a59f97,
-        #fffefa
+        #3f3c39,
+        #817c76,
+        #b9b7b2
     );
 }
 body.night {
@@ -467,18 +467,16 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     background-color: white;
     border-radius: 50%;
     opacity: 0;
-    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.3);
     animation: snow-movement linear infinite;
 }
 .snow.small{
     width: 2px;
     height: 2px;
-    animation-duration: 1.2s;
 }
 .snow.medium{
     width: 4px;
     height: 4px;
-    animation-duration: 1.8s;
 }
 @keyframes snow-movement {
     0% {
