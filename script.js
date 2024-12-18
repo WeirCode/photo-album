@@ -278,18 +278,18 @@ window.onload = function() {
     }
     switch(colorScheme){
         case "Sunset":
-            theme('sunset');
+            Theme('sunset');
             break;
         case "Winter":
-            theme('winter');
+            Theme('winter');
             break;
         case "Night":
-            theme('night');
+            Theme('night');
             break;
         case "Bright":
-            theme('bright');
+            Theme('bright');
             break;
         default:
-            theme('sunset');
+            Theme('sunset');
     }
 };
