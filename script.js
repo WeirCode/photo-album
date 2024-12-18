@@ -170,7 +170,7 @@ function Bright(){
     }
 }
 window.onload = function() {
-    calculateDaysTogether();
+    calculateDaysTogether();//I FIXED?
     let [mode,playlistCount,happy,happyCount,imageCount,image, backgroundEffect, colorScheme] = setVariables(getDateRange());
 
     const activeplayer = [];
