@@ -290,6 +290,117 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     object-fit: cover;
     transform: translateY(60%);
 }
+#bottom-image-container.winter {
+    position: fixed;
+    bottom: 30px;
+    left: -150px;
+    width: 60%;
+    z-index: 1;
+}
+#bottom-image-container.winter img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#bottom-image-container2.winter {
+    position: fixed;
+    bottom: 0px;
+    right: -100px;
+    width: 50%;
+    z-index: 1;
+}
+#bottom-image-container2.winter img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#random-image.winter{
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+}
+#random-image.winter img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#bottom-image-container.night {
+    position: fixed;
+    bottom: 30px;
+    left: -150px;
+    width: 60%;
+    z-index: 1;
+}
+#bottom-image-container.night img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#bottom-image-container2.night {
+    position: fixed;
+    bottom: 0px;
+    right: -100px;
+    width: 50%;
+    z-index: 1;
+}
+#bottom-image-container2.night img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#random-image.night{
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+}
+#random-image.night img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#bottom-image-container.bright {
+    position: fixed;
+    bottom: 30px;
+    left: -150px;
+    width: 60%;
+    z-index: 1;
+}
+#bottom-image-container.bright img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#bottom-image-container2.bright {
+    position: fixed;
+    bottom: 0px;
+    right: -100px;
+    width: 50%;
+    z-index: 1;
+}
+#bottom-image-container2.bright img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#random-image.bright{
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+}
+#random-image.bright img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
 /* STARS */
 .stars-container {
     position: fixed;
@@ -357,7 +468,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     border-radius: 50%;
     opacity: 0;
     box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.8);
-    animation: twinkle 1.5s infinite alternate, snow-movement 20s;
+    animation: snow-movement 10s linear infinite;
 }
 .snow.small{
     width: 2px;
