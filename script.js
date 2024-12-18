@@ -133,7 +133,33 @@ function createStars() {
     }
 }
 function createSnow(){
+    const numStars = 100;  // More stars
+    const starsContainer = document.createElement('div');
+    starsContainer.classList.add('snow-container');
+    document.body.appendChild(starsContainer);
 
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('snow');
+
+        // Randomize size (big, medium, small)
+        const size = Math.random();
+        if (size < 0.5) {
+            star.classList.add('small');
+        }else {
+            star.classList.add('medium');
+        }
+
+        // Randomize position (X and Y)
+        const topPos = Math.random() * 90 + '%';  // Limit stars to the top 70% of the screen
+        const leftPos = Math.random() * 100 + '%';
+
+        star.style.top = topPos;
+        star.style.left = leftPos;
+
+        // Add the star to the container
+        starsContainer.appendChild(star);
+    }
 }
 function createAurora(){
 
