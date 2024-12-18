@@ -137,7 +137,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     flex: 2;
     text-align: center;
 }
-#make-happy-button {
+#makeMeHappy {
     padding: 10px 20px;
     font-size: 1.5em;
     background: transparent;
@@ -146,32 +146,32 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
-#make-happy-button.sunset{
+#makeMeHappy.sunset{
     color: #d5a6bd;
     border: 1px #d5a6bd dotted;
 }
-#make-happy-button.sunset:hover {
+#makeMeHappy.sunset:hover {
     border-color: #b57ea8; /* Change border color on hover */
 }
-#make-happy-button.winter{
+#makeMeHappy.winter{
     color: #a31d1d;
     border: 1px #b82e2e dotted;
 }
-#make-happy-button.winter:hover {
+#makeMeHappy.winter:hover {
     border-color: #7e1818; /* Change border color on hover */
 }
-#make-happy-button.night{
+#makeMeHappy.night{
     color: #7a1a7a;
     border: 1px #721b7e dotted;
 }
-#make-happy-button.night:hover {
+#makeMeHappy.night:hover {
     border-color: #3f0c33; /* Change border color on hover */
 }
-#make-happy-button.bright{
+#makeMeHappy.bright{
     color: #f775b4;
     border: 1px #ff58a9 dotted;
 }
-#make-happy-button.bright:hover {
+#makeMeHappy.bright:hover {
     border-color: #f86161; /* Change border color on hover */
 }
 #audio-container {
