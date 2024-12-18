@@ -163,7 +163,7 @@ function createSnow(){
         setTimeout(() => {
             snow.remove();
             snowflakeCount--;
-        }, 10000);
+        }, (speed+5) * 1000);
     }
     setInterval(createNewSnowflake, 200);
 }
