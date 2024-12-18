@@ -282,7 +282,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 #random-image.sunset{
     position: absolute;
     width: 40%;
-    z-index: 1;
+    z-index: 11;
 }
 #random-image.sunset img{
     width: 100%;
@@ -319,10 +319,10 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 #random-image.winter{
     position: absolute;
     width: 40%;
-    z-index: 1;
+    z-index: 11;
 }
 #random-image.winter img{
-    width: 100%;
+    width: 50%;
     height: auto;
     object-fit: cover;
     transform: translateY(60%);
@@ -356,7 +356,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 #random-image.night{
     position: absolute;
     width: 40%;
-    z-index: 1;
+    z-index: 11;
 }
 #random-image.night img{
     width: 100%;
@@ -393,7 +393,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 #random-image.bright{
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 11;
 }
 #random-image.bright img{
     width: 100%;

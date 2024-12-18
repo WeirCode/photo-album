@@ -137,7 +137,11 @@ function createSnow(){
     snowContainer.classList.add('snow-container');
     document.body.appendChild(snowContainer);
 
+    let snowflakeCount = 0;
+    const maxSnowflakes = 100;
+
     function createNewSnowflake(){
+        if (snowflakeCount >= maxSnowflakes) return;
         const snow = document.createElement('div');
         snow.classList.add('snow');
         const size = Math.random();
@@ -155,11 +159,13 @@ function createSnow(){
         snow.style.setProperty('--random-x', `${horizontalDrift}%`);
         snow.style.animationDuration = `${speed + 5}s`;
         snowContainer.appendChild(snow);
+        snowflakeCount++;
         setTimeout(() => {
             star.remove();
+            snowflakeCount--;
         }, 1000);
     }
-    setInterval(createNewSnowflake, 400);
+    setInterval(createNewSnowflake, 200);
 }
 function createAurora(){
 
@@ -230,7 +236,7 @@ window.onload = function() {
 
     function placeRandomImage() {
         const imageDiv = document.getElementById('random-image');
-        const maxTilt = 30; // Maximum tilt angle in degrees
+        const maxTilt = 70; // Maximum tilt angle in degrees
     
         // Get the dimensions of the viewport
         const viewportWidth = window.innerWidth;
