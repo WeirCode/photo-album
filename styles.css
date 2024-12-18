@@ -121,16 +121,16 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     font-size: 2em;
     margin: 0;
 }
-#days-together h2.sunset{
+#days-together.sunset h2{
     color: #d5a6bd;
 }
-#days-together h2.winter{
+#days-together.winter h2{
     color: #e90606;
 }
-#days-together h2.night{
+#days-together.night h2{
     color: #9539eb;
 }
-#days-together h2.bright{
+#days-together.bright h2{
     color: #c00e0e;
 }
 #make-happy-container {
