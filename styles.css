@@ -292,7 +292,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 #bottom-image-container.winter {
     position: fixed;
-    bottom: 30px;
+    bottom: 50px;
     left: -150px;
     width: 60%;
     z-index: 1;
@@ -305,7 +305,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 #bottom-image-container2.winter {
     position: fixed;
-    bottom: 0px;
+    bottom: 30px;
     right: -100px;
     width: 50%;
     z-index: 1;
@@ -318,11 +318,11 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 #random-image.winter{
     position: absolute;
-    width: 40%;
+    width: 70px;
     z-index: 11;
 }
 #random-image.winter img{
-    width: 50%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     transform: translateY(60%);
