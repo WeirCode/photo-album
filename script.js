@@ -153,7 +153,7 @@ function createSnow(){
         const topPos = -1 + '%';
         const leftPos = Math.random() * 100 + '%';
         const speed = Math.random() * 3 + 2;
-        const horizontalDrift = Math.random() * 80 - 25;
+        const horizontalDrift = Math.random() * 50 - 25;
         snow.style.top = topPos;
         snow.style.left = leftPos;
         snow.style.setProperty('--random-x', `${horizontalDrift}%`);
