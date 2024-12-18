@@ -159,7 +159,7 @@ function createSnow(){
             star.remove();
         }, 1000);
     }
-    setInterval(createNewSnowflake, 50);
+    setInterval(createNewSnowflake, 400);
 }
 function createAurora(){
 
@@ -253,6 +253,7 @@ window.onload = function() {
         imageDiv.style.transform = `rotate(${randomTilt}deg)`;
     }
     placeRandomImage();
+    window.addEventListener('resize', placeRandomImage);
 
     calculateDaysTogether();
 
