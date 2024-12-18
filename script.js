@@ -138,7 +138,7 @@ function createSnow(){
     document.body.appendChild(snowContainer);
 
     let snowflakeCount = 0;
-    const maxSnowflakes = 300;
+    const maxSnowflakes = 400;
 
     function createNewSnowflake(){
         if (snowflakeCount >= maxSnowflakes) return;
@@ -150,7 +150,7 @@ function createSnow(){
         }else {
             snow.classList.add('medium');
         }
-        const topPos = -2 + '%';
+        const topPos = -1 + '%';
         const leftPos = Math.random() * 100 + '%';
         const speed = Math.random() * 3 + 2;
         const horizontalDrift = Math.random() * 80 - 25;
