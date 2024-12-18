@@ -57,7 +57,7 @@ function setVariables(range){
         mode = "newyear";
         document.getElementById("title").textContent = "Happy New Year! 🎇🎇🎇";
     } else if(range == 4){
-        playlistCount = 1;
+        playlistCount = 2;
         backgroundEffect = "Snow";
         colorScheme = "Winter";
         mode = "christmas";
@@ -66,7 +66,7 @@ function setVariables(range){
         playlistCount = 0;
         playlist = "music/birthday/track";
         backgroundEffect = "Stars";
-        colorScheme = "Winter";
+        colorScheme = "Night";
         mode = "birthday";
         document.getElementById("title").textContent = "Happy Birthday Baby! 🎂🎉🎈";
     } else{
