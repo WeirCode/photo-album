@@ -66,7 +66,7 @@ function setVariables(range){
         playlistCount = 0;
         playlist = "music/birthday/track";
         backgroundEffect = "Stars";
-        colorScheme = "Sunset";
+        colorScheme = "Winter";
         mode = "birthday";
         document.getElementById("title").textContent = "Happy Birthday Baby! 🎂🎉🎈";
     } else{
