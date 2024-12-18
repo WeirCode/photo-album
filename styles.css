@@ -1,115 +1,191 @@
 /* General body styles */
-html, body {
-    overflow: hidden; /* Prevent scrolling */
-    height: 100%; /* Ensure the body takes full height */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    box-sizing: border-box; /* Include padding and borders in width and height calculation */
+body{
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: -1;
+}
+body.sunset {
     background: linear-gradient(to bottom, 
-        #121c2e, /* Dark blue sky */
+        #121c2e,
         #19263f,
         #1c2b46,
         #24395f,
-        #3b4c8d, /* Sunset transition (darker blue) */
-        #f66b39, /* Sunset orange */
-        #f8c471, /* Sunset pinkish color */
-        #2980b9 /* Water blue */
+        #3b4c8d,
+        #f66b39,
+        #f8c471,
+        #2980b9
     );
-    z-index: -1;
+}
+body.winter {
+    background: linear-gradient(to bottom, 
+        #9cabc7, /* Dark blue sky */
+        #7489af,
+        #5b6f96,
+        #4c6697,
+        #646a83, /* Sunset transition (darker blue) */
+        #b88e66, /* Sunset orange */
+        #cea86a, /* Sunset pinkish color */
+        #9c8c54 /* Water blue */
+    );
+}
+body.night {
+    background: linear-gradient(to bottom, 
+        #1f0838, /* Dark blue sky */
+        #1c0a30,
+        #091a3a,
+        #1c0d38,
+        #131e4d, /* Sunset transition (darker blue) */
+        #2c124b, /* Sunset orange */
+        #370a42, /* Sunset pinkish color */
+        #122d3f /* Water blue */
+    );
+}
+body.bright {
+    background: linear-gradient(to bottom, 
+        #cb32f1, /* Dark blue sky */
+        #bb67cc,
+        #be79da,
+        #cc87f3,
+        #e09dee, /* Sunset transition (darker blue) */
+        #f5a6ff, /* Sunset orange */
+        #e4b4eb, /* Sunset pinkish color */
+        #fac6f7 /* Water blue */
+    );
 }
 #container {
     display: flex;
-    flex-direction: column; /* Stack the elements vertically */
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     width: 100%;
-    border: 10px solid #d5a6bd; /* Border around the container */
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
     background: transparent;
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding and borders don't cause overflow */
-    overflow: hidden; /* Prevents overflow */
+    box-sizing: border-box;
+    overflow: hidden;
     z-index: 10;
 }
-button, .make-happy-button, .audio-container, .bucket-list-container, .image-slider {
-    position: relative;  /* Required for z-index to work */
-    z-index: 10;         /* Make sure content is on top of the image */
+#container.sunset {
+    border: 10px solid #d5a6bd;
+}
+#container.winter {
+    border: 10px solid #0a8829;
+}
+#container.night{
+    border: 10px solid #a431f1;
+}
+#container.bright{
+    border: 10px solid #ac0d0d;
+}
+button, #make-happy-button, #audio-container, #bucket-list-container, #image-slider {
+    position: relative;
+    z-index: 10;
 }
 #page-title {
     text-align: center;
     padding: 0 0 20px 0;
     width: 100%;
 }
-
-#page-title h1 {
+#title {
     font-size: 3em;
     margin: 0;
-    color: #d5a6bd; /* Soft pink color for the title */
 }
-
-/* Top Section Container */
+#title.sunset{
+    color: #d5a6bd;
+}
+#title.winter{
+    color: #39c9c9;
+}
+#title.night{
+    color: #a431f1;
+}
+#title.bright{
+    color: #ac0d0d;
+}
 #top {
-    display: flex; /* Use Flexbox to arrange items horizontally */
-    justify-content: space-between; /* Space out the left, center, and right sections */
-    align-items: center; /* Vertically center the items */
-    padding: 10px; /* Space inside the container */
-    gap: 10px; /* Space between sections */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
 }
-
-/* Left Section: Days Together */
-.days-together {
-    flex: 1; /* Takes up available space */
-    text-align: left;  /*Align content to the left */
+#days-together {
+    flex: 1;
+    text-align: left;
 }
-
-/* Days Together Heading */
-.days-together h2 {
+#days-together h2 {
     font-size: 2em;
     margin: 0;
+}
+#days-together h2.sunset{
     color: #d5a6bd;
 }
-
-/* Center Section: Make Me Happy Button */
-.make-happy-container {
-    flex: 2; /* Takes up equal space as the left section */
-    text-align: center; /* Center the content inside */
+#days-together h2.winter{
+    color: #e90606;
 }
-
-.make-happy-button {
+#days-together h2.night{
+    color: #9539eb;
+}
+#days-together h2.bright{
+    color: #c00e0e;
+}
+#make-happy-container {
+    flex: 2;
+    text-align: center;
+}
+#make-happy-button {
     padding: 10px 20px;
     font-size: 1.5em;
-    color: #d5a6bd;
     background: transparent;
-    border: 1px #d5a6bd dotted;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
-
-/* Hover effect for the button */
-.make-happy-button:hover {
+#make-happy-button.sunset{
+    color: #d5a6bd;
+    border: 1px #d5a6bd dotted;
+}
+#make-happy-button.sunset:hover {
     border-color: #b57ea8; /* Change border color on hover */
 }
-
-/* Right Section: Audio and Bucket List */
-/* Audio Player Container */
-.audio-container {
+#make-happy-button.winter{
+    color: #a31d1d;
+    border: 1px #b82e2e dotted;
+}
+#make-happy-button.winter:hover {
+    border-color: #7e1818; /* Change border color on hover */
+}
+#make-happy-button.night{
+    color: #7a1a7a;
+    border: 1px #721b7e dotted;
+}
+#make-happy-button.night:hover {
+    border-color: #3f0c33; /* Change border color on hover */
+}
+#make-happy-button.bright{
+    color: #f775b4;
+    border: 1px #ff58a9 dotted;
+}
+#make-happy-button.bright:hover {
+    border-color: #f86161; /* Change border color on hover */
+}
+#audio-container {
     margin-bottom: 10px;
-    width: 100%; /* Ensure full width but limit max size */
-    max-width: 400px; /* Limit the max width to make it smaller */
-}
-.audio-container{
+    width: 100%;
+    max-width: 400px;
     display: flex;
+    align-items: center;
+    gap: 5px;
 }
-/* Styling the audio player */
-.audio-container audio {
-    width: 100%; /* Ensure the audio player fills the container */
-    height: 40px; /* Set a smaller height for the audio player */
+#audioplayer {
+    width: 100%;
+    height: 40px;
 }
-
-/* Style for Next Song Button */
 #nextButton {
     background: transparent;
     border: none;
@@ -117,82 +193,87 @@ button, .make-happy-button, .audio-container, .bucket-list-container, .image-sli
     font-size: 1em;
     width: 1px;
 }
-
-/* Bucket List Dropdown */
-.bucket-list-container {
+#bucket-list-container {
     display: flex;
     gap: 5px;
-    flex-direction: row; /* Stack the label and select vertically */
-    align-items: center; /* Align to the right */
+    flex-direction: row;
+    align-items: center;
+}
+#bucket-list-container.sunset{
     color: #d5a6bd;
 }
-
-.bucket-list-container select {
+#bucket-list-container.winter{
+    color: #60dd60;
+}
+#bucket-list-container.night{
+    color: #43618a;
+}
+#bucket-list-container.bright{
+    color: #bd1919;
+}
+#bucketList {
     font-size: 1em;
     padding: 8px;
-    margin-top: 5px; /* Space between label and dropdown */
+    margin-top: 5px;
     border-radius: 5px;
-    border: 2px solid #d5a6bd;
     background: transparent;
-    color: #d5a6bd;
     cursor: pointer;
 }
-
-/* Option styles */
-#bucketList option {
-    padding: 10px; /* Add padding to the options */
+#bucketList.sunset {
+    border: 2px solid #d5a6bd;
+    color: #d5a6bd;
 }
-.image-slider {
+#bucketList.winter {
+    border: 2px solid #398018;
+    color: #22a142;
+}
+#bucketList.night {
+    border: 2px solid #a839ca;
+    color: #c031c5;
+}
+#bucketList.bright {
+    border: 2px solid #fa9a9a;
+    color: #f78585;
+}
+#bucketList option {
+    padding: 10px;
+}
+#image-slider {
     text-align: center;
     margin-top: 10px;
 }
-
-/* Style for the image itself */
 #sliderImage {
     max-width: 45%;
     height: auto;
-    cursor: pointer; /* Change cursor to indicate it's clickable */
-    border-radius: 10px; /* Optional: add rounded corners */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Optional: add a shadow effect */
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 #sliderImage:hover{
     transition: 1s;
     transform: scale(1.01);
 }
-.bottom-image-container {
+#bottom-image-container {
     position: fixed;
     bottom: 30px;
     left: -150px;
-    width: 60%; /* Make the image span the full width of the page */
+    width: 60%;
     z-index: 1;
 }
-
-/* Style for the image itself */
-#bottomImage {
-    width: 100%; /* Make the image span the full width of the screen */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    transform: translateY(60%); /* Increase size to make the image appear larger */
+#bottomImage, #bottomImage2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
 }
-.bottom-image-container2 {
+#bottom-image-container2 {
     position: fixed;
     bottom: 0px;
     right: -100px;
-    width: 50%; /* Make the image span the full width of the page */
+    width: 50%;
     z-index: 1;
 }
-
-/* Style for the image itself */
-#bottomImage2 {
-    width: 100%; /* Make the image span the full width of the screen */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    transform: translateY(60%); /* Increase size to make the image appear larger */
-}
-
-/* Container for stars */
-/* Stars container (fixed position at the top) */
-/* Container for stars (fixed at the top of the page) */
+/* STARS */
 .stars-container {
     position: fixed;
     top: 0;
@@ -202,36 +283,29 @@ button, .make-happy-button, .audio-container, .bucket-list-container, .image-sli
     pointer-events: none;
     z-index: 5;
 }
-
-/* Style for individual stars */
 .star {
     position: absolute;
     background-color: white;
-    border-radius: 50%; /* Circular stars */
+    border-radius: 50%;
     opacity: 0;
-    box-shadow: 0 0 60px 3px rgba(255, 255, 255, 0.8);  /* Glowing effect */
-    animation: twinkle 1.5s infinite alternate, star-movement 20s; /* Animation to simulate twinkling */
+    box-shadow: 0 0 60px 3px rgba(255, 255, 255, 0.8);
+    animation: twinkle 1.5s infinite alternate, star-movement 20s;
 }
-
-/* Vary the sizes of stars: larger, medium, and small */
 .star.big {
     width: 5px;
     height: 5px;
-    animation-duration: 2.5s;  /* Slow twinkle for larger stars */
+    animation-duration: 2.5s;
 }
-
 .star.medium {
     width: 4px;
     height: 4px;
-    animation-duration: 1.8s;  /* Medium-speed twinkle for medium stars */
+    animation-duration: 1.8s;
 }
-
 .star.small {
     width: 2px;
     height: 2px;
-    animation-duration: 1.2s;  /* Fast twinkle for smaller stars */
+    animation-duration: 1.2s;
 }
-/* Keyframe animation for twinkling effect */
 @keyframes twinkle {
     0% {
         opacity: 0.3;
@@ -242,8 +316,6 @@ button, .make-happy-button, .audio-container, .bucket-list-container, .image-sli
         transform: scale(1.3);
     }
 }
-
-/* Optional: create random movement for the stars */
 @keyframes star-movement {
     0% {
         transform: translate(0, 0);
@@ -252,7 +324,6 @@ button, .make-happy-button, .audio-container, .bucket-list-container, .image-sli
         transform: translate(var(--move-x), var(--move-y));
     }
 }
-
 @media (max-width: 600px) {
     #page-title {
         padding: 0 0 5px 0;
@@ -293,12 +364,11 @@ button, .make-happy-button, .audio-container, .bucket-list-container, .image-sli
         bottom: 30px;
         right: -25px;
     }
-    
+    /* STAR */
     .star.big {
         width: 3px;
         height: 3px;
     }
-    
     .star.medium {
         width: 2px;
         height: 2px;

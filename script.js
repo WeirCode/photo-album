@@ -1,100 +1,92 @@
-//days
-const startDate = new Date("2023-04-08");
-const today = new Date();
-function calculateDaysTogether(startDate, today) {
-const timeDifference = today - startDate;
-const daysTogether = Math.floor(timeDifference / (1000 * 3600 * 24)); // Convert milliseconds to days
-document.getElementById("daysCount").textContent = daysTogether;
+//get Date Range variable
+function getDateRange(){
+    today = new Date();
+    const currentYear = today.getFullYear();
+    christmasStart = new Date(currentYear, 11, 1);
+    christmasEnd = new Date(currentYear, 11, 27);
+    newyearStart = new Date(currentYear, 11, 28);
+    newyearEnd = new Date(currentYear, 11, 31);
+    newyearNextStart = new Date(currentYear, 0, 1);
+    newyearNextEnd = new Date(currentYear, 0, 5);
+    anniversaryStart = new Date(currentYear, 5, 5);
+    anniversaryEnd = new Date(currentYear, 5, 10);
+    valentinesStart = new Date(currentYear, 1, 12);
+    valentinesEnd = new Date(currentYear, 1, 18);
+    birthdayStart = new Date(currentYear, 10, 10);
+    birthdayEnd = new Date(currentYear, 10, 20);
+    if(today <= birthdayEnd && today >= birthdayStart){
+        return 5;
+    }else if(today <= christmasEnd && today >= christmasStart){
+        return 4;
+    } else if((today >= newyearStart && today <= newyearEnd) || (today <= newyearNextEnd && today >= newyearNextStart)){
+        return 3;
+    } else if(today >= valentinesStart && today <= valentinesEnd){
+        return 2;
+    } else if(today >= anniversaryStart && anniversaryEnd >= today){
+        return 1;
+    } else{
+        return 0;
+    }
 }
-calculateDaysTogether(startDate, today);
-window.onload = function() {
-    // Playlist for music
-    const playlist = [
-        'playlist/track1.mp3',
-        'playlist/track2.mp3',
-        'playlist/track3.mp3',
-        'playlist/track4.mp3',
-        'playlist/track5.mp3',
-        'playlist/track6.mp3',
-        'playlist/track7.mp3',
-        'playlist/track8.mp3',
-        'playlist/track9.mp3',
-        'playlist/track10.mp3',
-        'playlist/track11.mp3',
-        'playlist/track12.mp3',
-        // Add more tracks as needed
-    ];
-
-    // Playlist for happy messages
-    const happyMessages = [
-        'playlist/happy1.mp3',
-        'playlist/happy2.mp3',
-        'playlist/happy3.mp3',
-        'playlist/happy4.mp3',
-        'playlist/happy5.mp3',
-        'playlist/happy6.mp3',
-        // Add more happy messages as needed
-    ];
-    // Image folder and array of image filenames
-    const imageFolder = 'images/';
-    const images = [
-        'image1.jpg',
-        'image2.jpg',
-        'image3.jpg',
-        'image4.jpg',
-        'image5.jpg',
-        'image6.jpg',
-        'image7.jpg',
-        'image8.jpg',
-        'image9.jpg',
-        'image10.jpg',
-        'image11.jpg',
-        'image12.jpg',
-    ];
-    let currentTrack = -1; // To track the current track in the playlist
-    const audioPlayer = document.getElementById('audioPlayer');
-    let isHappyMessagePlaying = false; // Track whether a happy message is playing
-    let currentImageIndex = 0; // Start with the first image
-    const sliderImage = document.getElementById('sliderImage');
-    // Function to play the next music track
-    function playNextTrack() {
-        // Pick a random index from the playlist, ensuring it's not the same as the last played
-        let nextTrack;
-        do {
-            nextTrack = Math.floor(Math.random() * playlist.length); // Pick a random track
-        } while (nextTrack === currentTrack); // Ensure it's not the same as the last played track
-
-        // Update the current track index
-        currentTrack = nextTrack;
-
-        // Set the audio player source to the selected track
-        audioPlayer.src = playlist[currentTrack];
-        audioPlayer.play(); // Play the selected track
+//SETS VARIABLES BASED ON DATE RANGE
+function setVariables(range){
+    let happy = "happy";
+    let happycount = 6;
+    let image = "slides";
+    let imageCount = 13;
+    let mode;
+    let playlistCount;
+    let backgroundEffect;
+    let colorScheme;
+    if(range == 1){
+        playlistCount = 0;
+        backgroundEffect = "Stars";
+        colorScheme = "Sunset";
+        mode = "anniversary";
+        document.getElementById("title").textContent = "💐 Happy Anniversary! I love you so much! 💕";
+    } else if(range == 2){
+        playlistCount = 0;
+        backgroundEffect = "Hearts";
+        colorScheme = "Sunset";
+        mode = "valentine";
+        document.getElementById("title").textContent = "Happy Valentines Day! ❤️❤️❤️";
+    } else if(range == 3){
+        playlistCount = 0;
+        backgroundEffect = "Fireworks";
+        colorScheme = "Sunset";
+        mode = "newyear";
+        document.getElementById("title").textContent = "Happy New Year! 🎇🎇🎇";
+    } else if(range == 4){
+        playlistCount = 1;
+        backgroundEffect = "Snow";
+        colorScheme = "Sunset";
+        mode = "christmas";
+        document.getElementById("title").textContent = "Happy Christmas Baby! 🎁🎄🎁";
+    } else if(range == 5){
+        playlistCount = 0;
+        playlist = "music/birthday/track";
+        backgroundEffect = "Stars";
+        colorScheme = "Sunset";
+        mode = "birthday";
+        document.getElementById("title").textContent = "Happy Birthday Baby! 🎂🎉🎈";
+    } else{
+        playlistCount = 0;
+        backgroundEffect = "Stars";
+        colorScheme = "Sunset";
+        mode = "default";
+        document.getElementById("title").textContent = "❤️ I Love You! ❤️";
     }
-    nextButton.addEventListener('click', playNextTrack);
-    audioPlayer.addEventListener('ended', function() {
-        playNextTrack();
-    });
-    playNextTrack();
-    createStars();
-
-    // Function to play a random happy message when the "Make Me Happy" button is clicked
-    document.getElementById('makeMeHappy').addEventListener('click', function() {
-        const randomMessage = happyMessages[Math.floor(Math.random() * happyMessages.length)];
-        audioPlayer.src = randomMessage;
-        audioPlayer.play();
-        isHappyMessagePlaying = true; // Set flag to true since a happy message is now playing
-    });
-    
-    // Function to change the image to the next one
-    function changeImage() {
-        currentImageIndex = (currentImageIndex + 1) % images.length; // Loop back to the first image
-        sliderImage.src = `${imageFolder}${images[currentImageIndex]}`;
-    }
-    
-    // Add a click event to change the image when clicked
-    sliderImage.addEventListener('click', changeImage);
-};
+    return [mode, playlistCount, happy, happycount, imageCount, image, backgroundEffect, colorScheme];
+}
+//Set Days Together
+function calculateDaysTogether() {
+    const anniversaryDate = new Date("2023-04-08 00:00");
+    const today = new Date();
+    const timeDifference = today - anniversaryDate;
+    const daysTogether = Math.floor(timeDifference / (1000 * 3600 * 24)); // Convert milliseconds to days
+    document.getElementById("daysCount").textContent = daysTogether;
+}
+//background effects
 function createStars() {
     const numStars = 100;  // More stars
     const starsContainer = document.createElement('div');
@@ -140,4 +132,126 @@ function createStars() {
         starsContainer.appendChild(star);
     }
 }
+function createSnow(){
 
+}
+function createAurora(){
+
+}
+function createFireworks(){
+
+}
+function createHearts(){
+
+}
+//color schemes
+function Sunset(){
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    for(var i = 0; i < elements.length;i++){
+        elements[i].classList.add('sunset');
+    }
+}
+function Winter(){
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    for(var i = 0; i < elements.length;i++){
+        elements[i].classList.add('winter');
+    }
+}
+function Night(){
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    for(var i = 0; i < elements.length;i++){
+        elements[i].classList.add('night');
+    }
+}
+function Bright(){
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    for(var i = 0; i < elements.length;i++){
+        elements[i].classList.add('bright');
+    }
+}
+window.onload = function() {
+    calculateDaysTogether(startDate, today);
+    let [mode,playlistCount,happy,happyCount,imageCount,image, backgroundEffect, colorScheme] = setVariables(getDateRange());
+
+    const activeplayer = [];
+    for (let i = 1; i <= playlistCount; i++){
+        activeplayer.push('music/'+mode+'/track'+i+'.mp3');
+    }
+    let currentTrack = -1;
+    function playNextTrack() {
+        let nextTrack;
+        do {
+            nextTrack = Math.floor(Math.random() * activeplayer.length);
+        } while (nextTrack === currentTrack);
+        currentTrack = nextTrack;
+        audioPlayer.src = activeplayer[currentTrack];
+        audioPlayer.play();
+    }
+    document.getElementById('nextButton').addEventListener('click', playNextTrack);
+    document.getElementById('audioPlayer').addEventListener('ended', function() {
+        playNextTrack();
+    });
+    playNextTrack();
+
+    const happyMessages = [];
+    for(let i = 1; i<happyCount; i++){
+        happyMessages.push('music/'+happy+'/happy'+i+'.mp3');
+    }
+    document.getElementById('makeMeHappy').addEventListener('click', function() {
+        const randomMessage = happyMessages[Math.floor(Math.random() * happyMessages.length)];
+        audioPlayer.src = randomMessage;
+        audioPlayer.play();
+    });
+
+    const images = [];
+    for(let i = 1; i <=imageCount; i++){
+        images.push('images/'+image+'/image'+i+'.jpg');
+    }
+    function changeImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        sliderImage.src = images[currentImageIndex];
+    }
+    let currentImageIndex = 0;
+    document.getElementById('sliderImage').addEventListener('click', changeImage);
+    
+    document.getElementById("bottom-image-container").innerHTML = "<img id='bottomImage' src='images/" + mode + "/left.png' alt=''>";
+    document.getElementById("bottom-image-container2").innerHTML = "<img id='bottomImage2' src='images/" + mode + "/right.png' alt=''>";
+    document.getElementById("random-image").innerHTML = "<img id='random' src='images/" + mode + "/random.png' alt=''>";
+
+    //backgroundeffect
+    switch(backgroundEffect){
+        case "Stars":
+            createStars();
+            break;
+        case "Snow":
+            createSnow();
+            break;
+        case "Fireworks":
+            createFireworks();
+            break;
+        case "Hearts":
+            createHearts();
+            break;
+        case "Aurora":
+            createAurora();
+            break;
+        default:
+            createStars();
+    }
+    switch(colorScheme){
+        case "Sunset":
+            Sunset();
+            break;
+        case "Winter":
+            Winter();
+            break;
+        case "Night":
+            Night();
+            break;
+        case "Bright":
+            Bright();
+            break;
+        default:
+            Sunset();
+    }
+};

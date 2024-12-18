@@ -5,39 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Love You</title>
     <!-- Add your favicon here -->
-    <link rel="icon" href="heart-icon.png" type="image/png">
+    <link rel="icon" href="images/visuals/heart-icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css"> <!-- Linking to external CSS -->
 </head>
-<body>
+<body id="body">
     <div id="container">
-        <div id="page-title">
-            <h1>Happy Birthday, Baby!</h1>
-        </div>
-    <!-- Top Section (Header) -->
+        <div id="page-title"><h1 id="title"></h1></div>
         <div id="top">
-        <!-- Left: Days Together -->
-        <div class="days-together">
-            <h2><span id="daysCount">Loading...</span> Days In Love</h2>
+        <div id="days-together">
+            <h2><span id="daysCount"></span> Days Together</h2>
         </div>
-
-        <!-- Center: Make Me Happy Button -->
-        <div class="make-happy-container">
+        <div id="make-happy-container">
             <button id="makeMeHappy" class="make-happy-button">Make Me Happy</button>
         </div>
-
-        <!-- Right: Audio and Bucket List -->
-        <div class="audio-bucket-container">
-            <!-- Audio Player -->
-            <div class="audio-container">
+        <div id="audio-bucket-container">
+            <div id="audio-container">
                 <audio id="audioPlayer" controls>
                     <source src="your-audio-file.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
                 <button id="nextButton" class="skip-button">⏭</button>
             </div>
-
-            <!-- Bucket List Dropdown -->
-            <div class="bucket-list-container">
+            <div id="bucket-list-container">
                 <h3>To Do:</h3>
                 <select id="bucketList">
                     <option>See Aurora</option>
@@ -56,16 +45,13 @@
             </div>
         </div>
         </div>
-        <div class="image-slider">
-            <img id="sliderImage" src="images/image4.jpg" alt="Cycling Image" />
+        <div id="image-slider">
+            <img id="sliderImage" src="images/slides/image1.jpg" alt="Cycling Image">
         </div>
     </div>
-    <div class="bottom-image-container">
-        <img id="bottomImage" src="images/hydrangea.png" alt="">
-    </div>
-    <div class="bottom-image-container2">
-        <img id="bottomImage2" src="images/lavender.png" alt="">
-    </div>
-    <script src="script.js"></script> <!-- Linking to external JS file -->
+    <div id="bottom-image-container"></div>
+    <div id="bottom-image-container2"></div>
+    <div id="random-image"></div>
+    <script src="script.js"></script>
 </body>
 </html>
