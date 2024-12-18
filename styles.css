@@ -468,7 +468,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     border-radius: 50%;
     opacity: 0;
     box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.8);
-    animation: snow-movement 10s linear infinite;
+    animation: snow-movement linear infinite;
 }
 .snow.small{
     width: 2px;

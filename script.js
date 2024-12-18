@@ -133,7 +133,7 @@ function createStars() {
     }
 }
 function createSnow(){
-    const numStars = 100;  // More stars
+    const numStars = 200;  // More stars
     const starsContainer = document.createElement('div');
     starsContainer.classList.add('snow-container');
     document.body.appendChild(starsContainer);
