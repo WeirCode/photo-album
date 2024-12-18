@@ -133,37 +133,33 @@ function createStars() {
     }
 }
 function createSnow(){
-    const numStars = 200;  // More stars
-    const starsContainer = document.createElement('div');
-    starsContainer.classList.add('snow-container');
-    document.body.appendChild(starsContainer);
+    const snowContainer = document.createElement('div');
+    snowContainer.classList.add('snow-container');
+    document.body.appendChild(snowContainer);
 
-    for (let i = 0; i < numStars; i++) {
-        const star = document.createElement('div');
-        star.classList.add('snow');
-
-        // Randomize size (big, medium, small)
+    function createNewSnowflake(){
+        const snow = document.createElement('div');
+        snow.classList.add('snow');
         const size = Math.random();
         if (size < 0.5) {
-            star.classList.add('small');
+            snow.classList.add('small');
         }else {
-            star.classList.add('medium');
+            snow.classList.add('medium');
         }
-
-        // Randomize position (X and Y)
-        const topPos = Math.random() * 100 + '%';  // Limit stars to the top 70% of the screen
+        const topPos = -5 + '%';
         const leftPos = Math.random() * 100 + '%';
-        const speed = Math.random() * 3 + 2;  // Snowflakes move between 2 and 5 seconds
+        const speed = Math.random() * 3 + 2;
         const horizontalDrift = Math.random() * 50 - 25;
-
-        star.style.top = topPos;
-        star.style.left = leftPos;
-        star.style.setProperty('--random-x', `${horizontalDrift}%`);
-        star.style.animationDuration = `${speed + 5}s`;
-
-        // Add the star to the container
-        starsContainer.appendChild(star);
+        snow.style.top = topPos;
+        snow.style.left = leftPos;
+        snow.style.setProperty('--random-x', `${horizontalDrift}%`);
+        snow.style.animationDuration = `${speed + 5}s`;
+        snowContainer.appendChild(snow);
+        setTimeout(() => {
+            star.remove();
+        }, (speed + 5) * 1000);
     }
+    setInterval(createNewSnowflake, 200);
 }
 function createAurora(){
 
