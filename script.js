@@ -179,9 +179,14 @@ window.onload = function() {
     let currentTrack = -1;
     function playNextTrack() {
         let nextTrack;
-        do {
-            nextTrack = Math.floor(Math.random() * activeplayer.length);
-        } while (nextTrack === currentTrack);
+        if(activeplayer.length > 1){
+            do {
+                nextTrack = Math.floor(Math.random() * activeplayer.length);
+            } while (nextTrack === currentTrack);
+        }
+        else{
+            nextTrack = 1;
+        }
         currentTrack = nextTrack;
         audioPlayer.src = activeplayer[currentTrack];
         audioPlayer.play();
