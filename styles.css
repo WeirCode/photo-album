@@ -26,9 +26,9 @@ body.winter {
         #0d1930,
         #0f141f,
         #141722, 
-        #3f3c39,
-        #817c76,
-        #b9b7b2
+        #22201f,
+        #474440,
+        #a7a298
     );
 }
 body.night {
@@ -484,7 +484,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
         opacity: 1;
     }
     100% {
-        transform: translateY(160vh) translateX(var(--random-x));
+        transform: translateY(1000) translateX(var(--random-x));
         opacity: 0;
     }
 }
