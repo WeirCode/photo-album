@@ -146,25 +146,25 @@ function createHearts(){
 }
 //color schemes
 function Sunset(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
     for(var i = 0; i < elements.length;i++){
         elements[i].classList.add('sunset');
     }
 }
 function Winter(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
     for(var i = 0; i < elements.length;i++){
         elements[i].classList.add('winter');
     }
 }
 function Night(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
     for(var i = 0; i < elements.length;i++){
         elements[i].classList.add('night');
     }
 }
 function Bright(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('make-happy-button'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
     for(var i = 0; i < elements.length;i++){
         elements[i].classList.add('bright');
     }
