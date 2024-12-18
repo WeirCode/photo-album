@@ -73,7 +73,7 @@ body.bright {
     border: 10px solid #d5a6bd;
 }
 #container.winter {
-    border: 10px solid #0a8829;
+    border: 10px solid #054e18;
 }
 #container.night{
     border: 10px solid #a431f1;
@@ -98,7 +98,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     color: #d5a6bd;
 }
 #title.winter{
-    color: #10851f;
+    color: #054e18;
 }
 #title.night{
     color: #a431f1;
@@ -125,7 +125,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     color: #d5a6bd;
 }
 #days-together.winter h2{
-    color: #e90606;
+    color: #8f0909;
 }
 #days-together.night h2{
     color: #9539eb;
@@ -154,8 +154,8 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     border-color: #b57ea8; /* Change border color on hover */
 }
 #makeMeHappy.winter{
-    color: #be2424;
-    border: 1px #be2424 dotted;
+    color: #8f0909;
+    border: 1px #8f0909 dotted;
 }
 #makeMeHappy.winter:hover {
     border-color: #7e1818; /* Change border color on hover */
@@ -197,7 +197,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     color: #d5a6bd;
 }
 #nextButton.winter{
-    color: #be2424;
+    color: #8f0909;
 }
 #nextButton.night{
     color: #9539eb;
@@ -215,7 +215,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     color: #d5a6bd;
 }
 #bucket-list-container.winter{
-    color: #b32323;
+    color: #8f0909;
 }
 #bucket-list-container.night{
     color: #43618a;
@@ -236,8 +236,8 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     color: #d5a6bd;
 }
 #bucketList.winter {
-    border: 2px solid #b31b1b;
-    color: #b32222;
+    border: 2px solid #8f0909;
+    color: #8f0909;
 }
 #bucketList.night {
     border: 2px solid #a839ca;

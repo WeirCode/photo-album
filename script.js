@@ -141,6 +141,7 @@ function createSnow(){
     const maxSnowflakes = 400;
 
     function createNewSnowflake(){
+        console.log(snowflakeCount);
         if (snowflakeCount >= maxSnowflakes) return;
         const snow = document.createElement('div');
         snow.classList.add('snow');
@@ -152,8 +153,8 @@ function createSnow(){
         }
         const topPos = -1 + '%';
         const leftPos = Math.random() * 100 + '%';
-        const speed = Math.random() * 3 + 2;
-        const horizontalDrift = Math.random() * 50 - 25;
+        const speed = Math.random() * 5 + 2;
+        const horizontalDrift = Math.random() * 50 - 10;
         snow.style.top = topPos;
         snow.style.left = leftPos;
         snow.style.setProperty('--random-x', `${horizontalDrift}%`);
@@ -163,7 +164,7 @@ function createSnow(){
         setTimeout(() => {
             snow.remove();
             snowflakeCount--;
-        }, (speed+20) * 1000);
+        }, 10000);
     }
     setInterval(createNewSnowflake, 100);
 }
@@ -178,7 +179,7 @@ function createHearts(){
 }
 //color schemes
 function Theme(theme){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList'),document.getElementById('bottom-image-container'),document.getElementById('bottom-image-container2'), document.getElementById('random-image')];
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList'),document.getElementById('bottom-image-container'),document.getElementById('bottom-image-container2'), document.getElementById('random-image'),document.getElementById('nextButton')];
     for(var i = 0; i < elements.length;i++){
         elements[i].classList.add(theme);
     }
