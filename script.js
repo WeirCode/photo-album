@@ -57,7 +57,7 @@ function setVariables(range){
         mode = "newyear";
         document.getElementById("title").textContent = "Happy New Year! 🎇🎇🎇";
     } else if(range == 4){
-        playlistCount = 2;
+        playlistCount = 3;
         backgroundEffect = "Snow";
         colorScheme = "Winter";
         mode = "christmas";
