@@ -138,10 +138,9 @@ function createSnow(){
     document.body.appendChild(snowContainer);
 
     let snowflakeCount = 0;
-    const maxSnowflakes = 400;
+    const maxSnowflakes = 200;
 
     function createNewSnowflake(){
-        console.log(snowflakeCount);
         if (snowflakeCount >= maxSnowflakes) return;
         const snow = document.createElement('div');
         snow.classList.add('snow');
@@ -162,7 +161,7 @@ function createSnow(){
         snowContainer.appendChild(snow);
         snowflakeCount++;
         setTimeout(() => {
-            //snow.remove();
+            snow.remove();
             snowflakeCount--;
         }, 10000);
     }
