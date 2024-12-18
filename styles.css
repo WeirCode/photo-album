@@ -193,6 +193,18 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     font-size: 1em;
     width: 1px;
 }
+#nextButton.sunset{
+    color: #d5a6bd;
+}
+#nextButton.winter{
+    color: #be2424;
+}
+#nextButton.night{
+    color: #9539eb;
+}
+#nextButton.bright{
+    color: #c00e0e;
+}
 #bucket-list-container {
     display: flex;
     gap: 5px;

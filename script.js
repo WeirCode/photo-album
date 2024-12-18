@@ -161,7 +161,7 @@ function createSnow(){
         snowContainer.appendChild(snow);
         snowflakeCount++;
         setTimeout(() => {
-            star.remove();
+            snow.remove();
             snowflakeCount--;
         }, 1000);
     }
