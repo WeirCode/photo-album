@@ -74,6 +74,7 @@ body.bright {
 }
 #container.winter {
     border: 10px solid #054e18;
+    border-bottom: 10px solid #dddada;
 }
 #container.night{
     border: 10px solid #a431f1;
@@ -121,16 +122,16 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     font-size: 2em;
     margin: 0;
 }
-#days-together.sunset h2{
+#days-together.sunset h2,#makeMeHappy.sunset, #nextButton.sunset,#bucket-list-container.sunset, #bucketList.sunset{
     color: #d5a6bd;
 }
-#days-together.winter h2{
+#days-together.winter h2,#makeMeHappy.winter, #nextButton.winter, #bucket-list-container.winter,#bucketList.winter{
     color: #8f0909;
 }
-#days-together.night h2{
+#days-together.night h2, #makeMeHappy.night, #nextButton.night, #bucket-list-container.night, #bucketList.night{
     color: #9539eb;
 }
-#days-together.bright h2{
+#days-together.bright h2, #makeMeHappy.bright, #nextButton.bright, #bucket-list-container.bright, #bucketList.bright{
     color: #c00e0e;
 }
 #make-happy-container {
@@ -146,29 +147,25 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
-#makeMeHappy.sunset{
-    color: #d5a6bd;
+#makeMeHappy.sunset,#bucketList.sunset{
     border: 1px #d5a6bd dotted;
 }
 #makeMeHappy.sunset:hover {
     border-color: #b57ea8; /* Change border color on hover */
 }
-#makeMeHappy.winter{
-    color: #8f0909;
+#makeMeHappy.winter, #bucketList.winter{
     border: 1px #8f0909 dotted;
 }
 #makeMeHappy.winter:hover {
     border-color: #7e1818; /* Change border color on hover */
 }
-#makeMeHappy.night{
-    color: #7a1a7a;
+#makeMeHappy.night, #bucketList.night{
     border: 1px #721b7e dotted;
 }
 #makeMeHappy.night:hover {
     border-color: #3f0c33; /* Change border color on hover */
 }
-#makeMeHappy.bright{
-    color: #f775b4;
+#makeMeHappy.bright, #bucketList.bright{
     border: 1px #ff58a9 dotted;
 }
 #makeMeHappy.bright:hover {
@@ -193,35 +190,11 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     font-size: 1em;
     width: 1px;
 }
-#nextButton.sunset{
-    color: #d5a6bd;
-}
-#nextButton.winter{
-    color: #8f0909;
-}
-#nextButton.night{
-    color: #9539eb;
-}
-#nextButton.bright{
-    color: #c00e0e;
-}
 #bucket-list-container {
     display: flex;
     gap: 5px;
     flex-direction: row;
     align-items: center;
-}
-#bucket-list-container.sunset{
-    color: #d5a6bd;
-}
-#bucket-list-container.winter{
-    color: #8f0909;
-}
-#bucket-list-container.night{
-    color: #43618a;
-}
-#bucket-list-container.bright{
-    color: #bd1919;
 }
 #bucketList {
     font-size: 1em;
@@ -230,22 +203,6 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     border-radius: 5px;
     background: transparent;
     cursor: pointer;
-}
-#bucketList.sunset {
-    border: 2px solid #d5a6bd;
-    color: #d5a6bd;
-}
-#bucketList.winter {
-    border: 2px solid #8f0909;
-    color: #8f0909;
-}
-#bucketList.night {
-    border: 2px solid #a839ca;
-    color: #c031c5;
-}
-#bucketList.bright {
-    border: 2px solid #fa9a9a;
-    color: #f78585;
 }
 #bucketList option {
     padding: 10px;

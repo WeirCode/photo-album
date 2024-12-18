@@ -162,11 +162,11 @@ function createSnow(){
         snowContainer.appendChild(snow);
         snowflakeCount++;
         setTimeout(() => {
-            snow.remove();
+            //snow.remove();
             snowflakeCount--;
         }, 10000);
     }
-    setInterval(createNewSnowflake, 100);
+    setInterval(createNewSnowflake, 200);
 }
 function createAurora(){
 
