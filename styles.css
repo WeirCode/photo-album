@@ -26,9 +26,9 @@ body.winter {
         #0d1930,
         #0f141f,
         #141722, 
-        #5c5248,
-        #918a80,
-        #fdfcf6
+        #d1cac2,
+        #eeeae4,
+        #fffefa
     );
 }
 body.night {
@@ -253,30 +253,42 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     transition: 1s;
     transform: scale(1.01);
 }
-#bottomImage, #bottomImage2 {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transform: translateY(60%);
-}
-#bottom-image-container {
+#bottom-image-container.sunset {
     position: fixed;
     bottom: 30px;
     left: -150px;
     width: 60%;
     z-index: 1;
 }
-#bottom-image-container2 {
+#bottom-image-container.sunset img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#bottom-image-container2.sunset {
     position: fixed;
     bottom: 0px;
     right: -100px;
     width: 50%;
     z-index: 1;
 }
-#random-image{
+#bottom-image-container2.sunset img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
+#random-image.sunset{
     position: absolute;
-    width: 50%;
+    width: 40%;
     z-index: 1;
+}
+#random-image.sunset img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
 }
 /* STARS */
 .stars-container {
@@ -337,6 +349,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     height: 70%;
     pointer-events: none;
     z-index: 5;
+    overflow: hidden;
 }
 .snow{
     position: absolute;
@@ -358,11 +371,11 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 @keyframes snow-movement {
     0% {
-        transform: translate(0, 0);
-        opacity: 100;
+        transform: translateY(0) translateX(0);
+        opacity: 1;
     }
     100% {
-        transform: translate(0, 600);
+        transform: translateY(100vh) translateX(calc(-50% + 100px * (random() - 0.5)));
         opacity: 0;
     }
 }

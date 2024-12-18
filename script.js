@@ -171,28 +171,10 @@ function createHearts(){
 
 }
 //color schemes
-function Sunset(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
+function Theme(theme){
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList'),document.getElementById('bottom-image-container'),document.getElementById('bottome-image-container2'), document.getElementById('random-image')];
     for(var i = 0; i < elements.length;i++){
-        elements[i].classList.add('sunset');
-    }
-}
-function Winter(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
-    for(var i = 0; i < elements.length;i++){
-        elements[i].classList.add('winter');
-    }
-}
-function Night(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
-    for(var i = 0; i < elements.length;i++){
-        elements[i].classList.add('night');
-    }
-}
-function Bright(){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList')];
-    for(var i = 0; i < elements.length;i++){
-        elements[i].classList.add('bright');
+        elements[i].classList.add(theme);
     }
 }
 window.onload = function() {
@@ -296,18 +278,18 @@ window.onload = function() {
     }
     switch(colorScheme){
         case "Sunset":
-            Sunset();
+            theme('sunset');
             break;
         case "Winter":
-            Winter();
+            theme('winter');
             break;
         case "Night":
-            Night();
+            theme('night');
             break;
         case "Bright":
-            Bright();
+            theme('bright');
             break;
         default:
-            Sunset();
+            theme('sunset');
     }
 };
