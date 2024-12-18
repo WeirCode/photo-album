@@ -150,7 +150,7 @@ function createSnow(){
         }else {
             snow.classList.add('medium');
         }
-        const topPos = -5 + '%';
+        const topPos = -2 + '%';
         const leftPos = Math.random() * 100 + '%';
         const speed = Math.random() * 3 + 2;
         const horizontalDrift = Math.random() * 80 - 25;
