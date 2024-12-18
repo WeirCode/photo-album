@@ -138,7 +138,7 @@ function createSnow(){
     document.body.appendChild(snowContainer);
 
     let snowflakeCount = 0;
-    const maxSnowflakes = 200;
+    const maxSnowflakes = 400;
 
     function createNewSnowflake(){
         if (snowflakeCount >= maxSnowflakes) return;
@@ -165,7 +165,7 @@ function createSnow(){
             snowflakeCount--;
         }, (speed+5) * 1000);
     }
-    setInterval(createNewSnowflake, 200);
+    setInterval(createNewSnowflake, 100);
 }
 function createAurora(){
 
