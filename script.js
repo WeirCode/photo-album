@@ -59,7 +59,7 @@ function setVariables(range){
     } else if(range == 4){
         playlistCount = 1;
         backgroundEffect = "Snow";
-        colorScheme = "Sunset";
+        colorScheme = "Winter";
         mode = "christmas";
         document.getElementById("title").textContent = "Happy Christmas Baby! 🎁🎄🎁";
     } else if(range == 5){
