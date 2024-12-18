@@ -172,7 +172,7 @@ function createHearts(){
 }
 //color schemes
 function Theme(theme){
-    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList'),document.getElementById('bottom-image-container'),document.getElementById('bottome-image-container2'), document.getElementById('random-image')];
+    let elements = [document.getElementById('body'),document.getElementById('container'),document.getElementById('title'),document.getElementById('days-together'), document.getElementById('makeMeHappy'),document.getElementById('bucket-list-container'),document.getElementById('bucketList'),document.getElementById('bottom-image-container'),document.getElementById('bottom-image-container2'), document.getElementById('random-image')];
     for(var i = 0; i < elements.length;i++){
         elements[i].classList.add(theme);
     }
