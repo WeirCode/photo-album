@@ -467,7 +467,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     background-color: white;
     border-radius: 50%;
     opacity: 0;
-    box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.8);
     animation: snow-movement linear infinite;
 }
 .snow.small{
@@ -500,17 +500,17 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     #top {
         flex-direction: column;
     }
-    .days-together h2 {
+    #days-together h2 {
         font-size: 1.2em;
     }
-    .make-happy-button {
+    #makeMeHappy {
         font-size: 1.2em;
     }
-    .audio-container {
+    #audio-container {
         margin-bottom: 0px;
         margin-top: 5px;
     }
-    .image-slider {
+    #image-slider {
         margin-top: 0px;
     }
     #sliderImage {
@@ -523,10 +523,10 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
         transition: 0.5s;
         transform: scale(1.24);
     }
-    .bottom-image-container {
+    #bottom-image-container {
         left: -50px;
     }
-    .bottom-image-container2 {
+    #bottom-image-container2 {
         bottom: 30px;
         right: -25px;
     }
