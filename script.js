@@ -138,7 +138,7 @@ function createSnow(){
     document.body.appendChild(snowContainer);
 
     let snowflakeCount = 0;
-    const maxSnowflakes = 400;
+    const maxSnowflakes = 1000;
 
     function createNewSnowflake(){
         if (snowflakeCount >= maxSnowflakes) return;
