@@ -482,11 +482,11 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 @keyframes snow-movement {
     0% {
-        transform: translateY(0);
+        transform: translateY(0) translateX(0);
         opacity: 1;
     }
     100% {
-        transform: translateY(100vh);
+        transform: translateY(100vh) translateX(var(--random-x));
         opacity: 0;
     }
 }

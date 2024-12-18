@@ -153,9 +153,13 @@ function createSnow(){
         // Randomize position (X and Y)
         const topPos = Math.random() * 100 + '%';  // Limit stars to the top 70% of the screen
         const leftPos = Math.random() * 100 + '%';
+        const speed = Math.random() * 3 + 2;  // Snowflakes move between 2 and 5 seconds
+        const horizontalDrift = Math.random() * 50 - 25;
 
         star.style.top = topPos;
         star.style.left = leftPos;
+        star.style.setProperty('--random-x', `${horizontalDrift}%`);
+        star.style.animationDuration = `${speed + 5}s`;
 
         // Add the star to the container
         starsContainer.appendChild(star);
