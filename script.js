@@ -138,7 +138,7 @@ function createSnow(){
     document.body.appendChild(snowContainer);
 
     let snowflakeCount = 0;
-    const maxSnowflakes = 100;
+    const maxSnowflakes = 300;
 
     function createNewSnowflake(){
         if (snowflakeCount >= maxSnowflakes) return;
@@ -153,7 +153,7 @@ function createSnow(){
         const topPos = -5 + '%';
         const leftPos = Math.random() * 100 + '%';
         const speed = Math.random() * 3 + 2;
-        const horizontalDrift = Math.random() * 50 - 25;
+        const horizontalDrift = Math.random() * 80 - 25;
         snow.style.top = topPos;
         snow.style.left = leftPos;
         snow.style.setProperty('--random-x', `${horizontalDrift}%`);
