@@ -469,7 +469,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     top: 0;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 90%;
     pointer-events: none;
     z-index: 5;
     overflow: hidden;
