@@ -187,9 +187,7 @@ window.onload = function() {
         audioPlayer.play();
     }
     document.getElementById('nextButton').addEventListener('click', playNextTrack);
-    document.getElementById('audioPlayer').addEventListener('ended', function() {
-        playNextTrack();
-    });
+    document.getElementById('audioPlayer').addEventListener('ended', function() {playNextTrack();});
     playNextTrack();
 
     const happyMessages = [];
