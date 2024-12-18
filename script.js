@@ -170,7 +170,6 @@ function Bright(){
     }
 }
 window.onload = function() {
-    calculateDaysTogether();//I FIXED?
     let [mode,playlistCount,happy,happyCount,imageCount,image, backgroundEffect, colorScheme] = setVariables(getDateRange());
 
     const activeplayer = [];
@@ -217,6 +216,8 @@ window.onload = function() {
     document.getElementById("bottom-image-container").innerHTML = "<img id='bottomImage' src='images/" + mode + "/left.png' alt=''>";
     document.getElementById("bottom-image-container2").innerHTML = "<img id='bottomImage2' src='images/" + mode + "/right.png' alt=''>";
     document.getElementById("random-image").innerHTML = "<img id='random' src='images/" + mode + "/random.png' alt=''>";
+
+    calculateDaysTogether();
 
     //backgroundeffect
     switch(backgroundEffect){
