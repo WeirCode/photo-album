@@ -261,9 +261,9 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 #bottom-image-container.winter {
     position: fixed;
-    bottom: 200px;
+    bottom: 300px;
     left: -150px;
-    width: 60%;
+    width: 40%;
     z-index: 1;
 }
 #bottom-image-container.winter img {
