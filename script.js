@@ -151,7 +151,7 @@ function createSnow(){
         }
 
         // Randomize position (X and Y)
-        const topPos = Math.random() * 90 + '%';  // Limit stars to the top 70% of the screen
+        const topPos = Math.random() * 100 + '%';  // Limit stars to the top 70% of the screen
         const leftPos = Math.random() * 100 + '%';
 
         star.style.top = topPos;
