@@ -21,38 +21,38 @@ body.sunset {
 }
 body.winter {
     background: linear-gradient(to bottom, 
-        #9cabc7, /* Dark blue sky */
-        #7489af,
-        #5b6f96,
-        #4c6697,
-        #646a83, /* Sunset transition (darker blue) */
-        #b88e66, /* Sunset orange */
-        #cea86a, /* Sunset pinkish color */
-        #9c8c54 /* Water blue */
+        #040b1a, 
+        #081327,
+        #0d1930,
+        #0f141f,
+        #141722, 
+        #5c5248,
+        #918a80,
+        #fdfcf6
     );
 }
 body.night {
     background: linear-gradient(to bottom, 
-        #1f0838, /* Dark blue sky */
+        #1f0838, 
         #1c0a30,
         #091a3a,
         #1c0d38,
-        #131e4d, /* Sunset transition (darker blue) */
-        #2c124b, /* Sunset orange */
-        #370a42, /* Sunset pinkish color */
-        #122d3f /* Water blue */
+        #131e4d, 
+        #2c124b,
+        #370a42, 
+        #122d3f
     );
 }
 body.bright {
     background: linear-gradient(to bottom, 
-        #cb32f1, /* Dark blue sky */
+        #cb32f1, 
         #bb67cc,
         #be79da,
         #cc87f3,
-        #e09dee, /* Sunset transition (darker blue) */
-        #f5a6ff, /* Sunset orange */
-        #e4b4eb, /* Sunset pinkish color */
-        #fac6f7 /* Water blue */
+        #e09dee, 
+        #f5a6ff,
+        #e4b4eb, 
+        #fac6f7
     );
 }
 #container {
@@ -253,6 +253,12 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     transition: 1s;
     transform: scale(1.01);
 }
+#bottomImage, #bottomImage2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(60%);
+}
 #bottom-image-container {
     position: fixed;
     bottom: 30px;
@@ -260,16 +266,15 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     width: 60%;
     z-index: 1;
 }
-#bottomImage, #bottomImage2 {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transform: translateY(60%);
-}
 #bottom-image-container2 {
     position: fixed;
     bottom: 0px;
     right: -100px;
+    width: 50%;
+    z-index: 1;
+}
+#random-image{
+    position: absolute;
     width: 50%;
     z-index: 1;
 }

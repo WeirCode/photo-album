@@ -220,6 +220,32 @@ window.onload = function() {
     document.getElementById("bottom-image-container2").innerHTML = "<img id='bottomImage2' src='images/" + mode + "/right.png' alt=''>";
     document.getElementById("random-image").innerHTML = "<img id='random' src='images/" + mode + "/random.png' alt=''>";
 
+    function placeRandomImage() {
+        const imageDiv = document.getElementById('random-image');
+        const maxTilt = 30; // Maximum tilt angle in degrees
+    
+        // Get the dimensions of the viewport
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+    
+        // Get the dimensions of the image
+        const imageWidth = imageDiv.offsetWidth;
+        const imageHeight = imageDiv.offsetHeight;
+    
+        // Generate random top and left positions
+        const randomLeft = Math.random() * (viewportWidth - imageWidth);
+        const randomTop = Math.random() * (viewportHeight - imageHeight);
+    
+        // Generate a random tilt angle between -maxTilt and maxTilt
+        const randomTilt = Math.random() * maxTilt * 2 - maxTilt;
+    
+        // Apply the new position and tilt
+        imageDiv.style.left = `${randomLeft}px`;
+        imageDiv.style.top = `${randomTop}px`;
+        imageDiv.style.transform = `rotate(${randomTilt}deg)`;
+    }
+    placeRandomImage();
+
     calculateDaysTogether();
 
     //backgroundeffect
