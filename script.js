@@ -233,8 +233,8 @@ window.onload = function() {
         const imageHeight = imageDiv.offsetHeight;
     
         // Generate random top and left positions
-        const randomLeft = Math.random() * (viewportWidth - (imageWidth+100));
-        const randomTop = Math.random() * (viewportHeight - (imageHeight+100));
+        const randomLeft = Math.random() * (viewportWidth - (imageWidth));
+        const randomTop = Math.random() * (viewportHeight - (imageHeight));
     
         // Generate a random tilt angle between -maxTilt and maxTilt
         const randomTilt = Math.random() * maxTilt * 2 - maxTilt;
@@ -244,6 +244,7 @@ window.onload = function() {
         imageDiv.style.top = `${randomTop}px`;
         imageDiv.style.transform = `rotate(${randomTilt}deg)`;
     }
+    placeRandomImage();
     window.addEventListener('resize', placeRandomImage);
 
     calculateDaysTogether();
