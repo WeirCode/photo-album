@@ -264,6 +264,7 @@ window.onload = function() {
     }
     document.getElementById('nextButton').addEventListener('click', playNextTrack);
     document.getElementById('audioPlayer').addEventListener('ended', function() {playNextTrack();});
+    playNextTrack();
 
     //backgroundeffect
     switch(backgroundEffect){
