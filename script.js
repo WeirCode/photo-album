@@ -33,7 +33,7 @@ function setVariables(range){
     let happy = "happy";
     let happycount = 6;
     let image = "slides";
-    let imageCount = 13;
+    let imageCount = 23;
     let mode;
     let playlistCount;
     let backgroundEffect;
