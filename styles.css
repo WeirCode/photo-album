@@ -481,8 +481,6 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
         margin-top: 0px;
     }
     #sliderImage {
-        width: 100%;
-        height: auto;
         margin-top: 14px;
         transform: scale(1.22);
     }
