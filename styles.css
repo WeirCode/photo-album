@@ -481,8 +481,8 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
         margin-top: 0px;
     }
     #sliderImage {
-        height: auto;
-        width: 100%;
+        height: 35vh;
+        width: auto;
         margin-top: 14px;
         transform: scale(1.22);
     }
@@ -490,13 +490,13 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
         transition: 0.5s;
         transform: scale(1.24);
     }
-    #bottom-image-container {
-        left: -40px;
-        bottom: -100px;
+    #bottom-image-container.winter {
+        left: -11px;
+        bottom: 46px;
     }
-    #bottom-image-container2 {
-        bottom: -70px;
-        right: -30px;
+    #bottom-image-container2.winter {
+        bottom: 82px;
+        right: -36px;
     }
     /* STAR */
     .star.big {
