@@ -461,7 +461,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     #page-title {
         padding: 0 0 5px 0;
     }
-    #page-title h1 {
+    #page-title h2 {
         font-size: 1.4em;
     }
     #top {
@@ -481,6 +481,8 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
         margin-top: 0px;
     }
     #sliderImage {
+        height: auto;
+        width: 100%;
         margin-top: 14px;
         transform: scale(1.22);
     }
@@ -489,11 +491,12 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
         transform: scale(1.24);
     }
     #bottom-image-container {
-        left: -50px;
+        left: -40px;
+        bottom: -100px;
     }
     #bottom-image-container2 {
-        bottom: 30px;
-        right: -25px;
+        bottom: -70px;
+        right: -30px;
     }
     /* STAR */
     .star.big {
