@@ -220,6 +220,7 @@ window.onload = function() {
     document.getElementById('sliderImage').addEventListener('click', changeImage);
     
     function placeRandomImage() {
+        const imageDiv = document.getElementById("random");
         const maxTilt = 70; // Maximum tilt angle in degrees
     
         // Get the dimensions of the viewport
