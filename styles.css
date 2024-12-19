@@ -262,7 +262,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 #bottom-image-container.winter {
     position: fixed;
     bottom: 300px;
-    left: -150px;
+    left: -40px;
     width: 40%;
     z-index: 1;
 }
