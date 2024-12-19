@@ -57,7 +57,7 @@ function setVariables(range){
         mode = "newyear";
         document.getElementById("title").textContent = "Happy New Year! 🎇🎇🎇";
     } else if(range == 4){
-        playlistCount = 3;
+        playlistCount = 10;
         backgroundEffect = "Snow";
         colorScheme = "Winter";
         mode = "christmas";
@@ -165,7 +165,11 @@ function createSnow(){
             snowflakeCount--;
         }, (speed+5) * 1000);
     }
-    setInterval(createNewSnowflake, 70);
+    if(window.innerWidth <= 800){
+        setInterval(createNewSnowflake, 150);
+    } else{
+        setInterval(createNewSnowflake, 50);
+    }
 }
 function createAurora(){
 
@@ -185,29 +189,15 @@ function Theme(theme){
 }
 window.onload = function() {
     let [mode,playlistCount,happy,happyCount,imageCount,image, backgroundEffect, colorScheme] = setVariables(getDateRange());
+    document.getElementById("bottom-image-container").innerHTML = "<img id='bottomImage' src='images/" + mode + "/left.png' alt=''>";
+    document.getElementById("bottom-image-container2").innerHTML = "<img id='bottomImage2' src='images/" + mode + "/right.png' alt=''>";
+    document.getElementById("random-image").innerHTML = "<img id='random' src='images/" + mode + "/random.png' alt=''>";
+    placeRandomImage();
 
     const activeplayer = [];
     for (let i = 1; i <= playlistCount; i++){
         activeplayer.push('music/'+mode+'/track'+i+'.mp3');
     }
-    let currentTrack = -1;
-    function playNextTrack() {
-        let nextTrack;
-        if(activeplayer.length > 1){
-            do {
-                nextTrack = Math.floor(Math.random() * activeplayer.length);
-            } while (nextTrack === currentTrack);
-        }
-        else{
-            nextTrack = 1;
-        }
-        currentTrack = nextTrack;
-        audioPlayer.src = activeplayer[currentTrack];
-        audioPlayer.play();
-    }
-    document.getElementById('nextButton').addEventListener('click', playNextTrack);
-    document.getElementById('audioPlayer').addEventListener('ended', function() {playNextTrack();});
-    playNextTrack();
 
     const happyMessages = [];
     for(let i = 1; i<happyCount; i++){
@@ -230,10 +220,6 @@ window.onload = function() {
     let currentImageIndex = 0;
     document.getElementById('sliderImage').addEventListener('click', changeImage);
     
-    document.getElementById("bottom-image-container").innerHTML = "<img id='bottomImage' src='images/" + mode + "/left.png' alt=''>";
-    document.getElementById("bottom-image-container2").innerHTML = "<img id='bottomImage2' src='images/" + mode + "/right.png' alt=''>";
-    document.getElementById("random-image").innerHTML = "<img id='random' src='images/" + mode + "/random.png' alt=''>";
-
     function placeRandomImage() {
         const imageDiv = document.getElementById('random-image');
         const maxTilt = 70; // Maximum tilt angle in degrees
@@ -258,10 +244,26 @@ window.onload = function() {
         imageDiv.style.top = `${randomTop}px`;
         imageDiv.style.transform = `rotate(${randomTilt}deg)`;
     }
-    placeRandomImage();
     window.addEventListener('resize', placeRandomImage);
 
     calculateDaysTogether();
+    let currentTrack = -1;
+    function playNextTrack() {
+        let nextTrack;
+        if(activeplayer.length > 1){
+            do {
+                nextTrack = Math.floor(Math.random() * activeplayer.length);
+            } while (nextTrack === currentTrack);
+        }
+        else{
+            nextTrack = 1;
+        }
+        currentTrack = nextTrack;
+        audioPlayer.src = activeplayer[currentTrack];
+        audioPlayer.play();
+    }
+    document.getElementById('nextButton').addEventListener('click', playNextTrack);
+    document.getElementById('audioPlayer').addEventListener('ended', function() {playNextTrack();});
 
     //backgroundeffect
     switch(backgroundEffect){
