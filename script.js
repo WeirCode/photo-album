@@ -221,16 +221,11 @@ window.onload = function() {
     document.getElementById('sliderImage').addEventListener('click', changeImage);
     
     function placeRandomImage() {
-        const imageDiv = document.getElementById('random-image');
         const maxTilt = 70; // Maximum tilt angle in degrees
     
         // Get the dimensions of the viewport
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
-    
-        // Get the dimensions of the image
-        const imageWidth = imageDiv.offsetWidth;
-        const imageHeight = imageDiv.offsetHeight;
     
         // Generate random top and left positions
         const randomLeft = Math.random() * (viewportWidth - 100);
