@@ -165,7 +165,7 @@ function createSnow(){
             snowflakeCount--;
         }, (speed+5) * 1000);
     }
-    setInterval(createNewSnowflake, 50);
+    setInterval(createNewSnowflake, 70);
 }
 function createAurora(){
 
