@@ -168,7 +168,7 @@ function createSnow(){
     if(window.innerWidth <= 800){
         setInterval(createNewSnowflake, 150);
     } else{
-        setInterval(createNewSnowflake, 50);
+        setInterval(createNewSnowflake, 40);
     }
 }
 function createAurora(){
