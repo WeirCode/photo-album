@@ -233,8 +233,8 @@ window.onload = function() {
         const imageHeight = imageDiv.offsetHeight;
     
         // Generate random top and left positions
-        const randomLeft = Math.random() * (viewportWidth - (imageWidth));
-        const randomTop = Math.random() * (viewportHeight - (imageHeight));
+        const randomLeft = Math.random() * (viewportWidth - 100);
+        const randomTop = Math.random() * (viewportHeight - 100);
     
         // Generate a random tilt angle between -maxTilt and maxTilt
         const randomTilt = Math.random() * maxTilt * 2 - maxTilt;
