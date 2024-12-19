@@ -21,14 +21,14 @@ body.sunset {
 }
 body.winter {
     background: linear-gradient(to bottom, 
-        #040b1a, 
-        #081327,
-        #0d1930,
-        #0f141f,
-        #141722, 
-        #22201f,
-        #474440,
-        #a7a298
+        #1c032c, 
+        #081835,
+        #0f0927,
+        #080d18,
+        #0f1322, 
+        #130927,
+        #230b25,
+        #110c03
     );
 }
 body.night {
@@ -426,7 +426,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     top: 0;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
     pointer-events: none;
     z-index: 5;
     overflow: hidden;
