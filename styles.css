@@ -20,6 +20,19 @@ body.sunset {
     );
 }
 body.winter {
+    background: radial-gradient(circle closest-side, 
+        #0e9415, 
+        #eceff5,
+        #d41616,
+        #cfd0d1,
+        #12aa12, 
+        #d4d3d8,
+        #b1072c,
+        #d3d1ce
+    );
+
+}
+body.night {
     background: linear-gradient(to bottom, 
         #1c032c, 
         #081835,
@@ -29,18 +42,6 @@ body.winter {
         #130927,
         #230b25,
         #110c03
-    );
-}
-body.night {
-    background: linear-gradient(to bottom, 
-        #1f0838, 
-        #1c0a30,
-        #091a3a,
-        #1c0d38,
-        #131e4d, 
-        #2c124b,
-        #370a42, 
-        #122d3f
     );
 }
 body.bright {
