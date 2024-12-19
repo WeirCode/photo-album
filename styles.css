@@ -20,7 +20,7 @@ body.sunset {
     );
 }
 body.winter {
-    background: radial-gradient( 
+    /*background: radial-gradient( 
         #0e9415, 
         #eceff5,
         #d41616,
@@ -29,8 +29,20 @@ body.winter {
         #d4d3d8,
         #b1072c,
         #d3d1ce
+    );*/
+    background: radial-gradient(
+        rgb(48, 36, 216),
+        rgb(41, 30, 190),
+        rgb(42, 30, 207),
+        rgb(43, 32, 199),
+        rgb(19, 19, 145),
+        rgb(15, 29, 151),
+        rgb(7, 7, 95),
+        rgb(3, 3, 70),
+        rgb(6, 6, 68),
+        rgb(2, 2, 26),
+        rgb(1, 1, 19)
     );
-
 }
 body.night {
     background: linear-gradient(to bottom, 
