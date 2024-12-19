@@ -20,17 +20,17 @@ body.sunset {
     );
 }
 body.winter {
-    /*background: radial-gradient( 
-        #0e9415, 
-        #eceff5,
+    background: radial-gradient(circle closest-side,
+        #0b8f11, 
         #d41616,
-        #cfd0d1,
-        #12aa12, 
-        #d4d3d8,
-        #b1072c,
+        #d41616,
+        #0b8f11,
+        #0b8f11, 
+        #d3d1ce,
+        #d3d1ce,
         #d3d1ce
-    );*/
-    background: radial-gradient(
+    );
+    /*background: radial-gradient(
         rgb(48, 36, 216),
         rgb(41, 30, 190),
         rgb(42, 30, 207),
@@ -42,7 +42,7 @@ body.winter {
         rgb(6, 6, 68),
         rgb(2, 2, 26),
         rgb(1, 1, 19)
-    );
+    );*/
 }
 body.night {
     background: linear-gradient(to bottom, 
