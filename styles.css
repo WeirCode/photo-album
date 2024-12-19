@@ -20,7 +20,7 @@ body.sunset {
     );
 }
 body.winter {
-    background: radial-gradient(circle closest-side,
+    background: radial-gradient(circle at top right,
         #0b8f11, 
         #d41616,
         #d41616,
