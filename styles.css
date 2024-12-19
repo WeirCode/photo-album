@@ -212,7 +212,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     margin-top: 10px;
 }
 #sliderImage {
-    height: 70vh;
+    height: 60vh;
     width: auto;
     cursor: pointer;
     border-radius: 10px;
