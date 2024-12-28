@@ -3,8 +3,8 @@ function getDateRange(){
     today = new Date();
     const currentYear = today.getFullYear();
     christmasStart = new Date(currentYear, 11, 1);
-    christmasEnd = new Date(currentYear, 11, 27);
-    newyearStart = new Date(currentYear, 11, 28);
+    christmasEnd = new Date(currentYear, 11, 30);
+    newyearStart = new Date(currentYear, 11, 30);
     newyearEnd = new Date(currentYear, 11, 31);
     newyearNextStart = new Date(currentYear, 0, 1);
     newyearNextEnd = new Date(currentYear, 0, 5);
@@ -51,9 +51,9 @@ function setVariables(range){
         mode = "valentine";
         document.getElementById("title").textContent = "Happy Valentines Day! ❤️❤️❤️";
     } else if(range == 3){
-        playlistCount = 0;
+        playlistCount = 12;
         backgroundEffect = "Fireworks";
-        colorScheme = "Sunset";
+        colorScheme = "Night";
         mode = "newyear";
         document.getElementById("title").textContent = "Happy New Year! 🎇🎇🎇";
     } else if(range == 4){
@@ -174,7 +174,39 @@ function createSnow(){
 function createAurora(){
 
 }
-function createFireworks(){
+function createFireworks(){//create a container to hold the fireworks
+    const fireworkContainer = document.createElement('div');
+    fireworkContainer.classList.add('firework-container');
+    document.body.appendChild(fireworkContainer);
+
+    let fireworkCount = 0;
+    const maxFireworks = 250;
+    const fireworks = {};
+    function createCluster(){
+        const firework = document.createElement('div');//create a firework cluster
+        fireworkContainer.appendChild(firework);//add to container
+        randomNumber
+        randomColor
+        for(let i = 0; i < randomNumber; i++){//create random number of particles
+            const particle = document.createElement('div');
+            particle.style.backgroundColor(randomColor);//give random color
+            fireworks[firework].append(particle);//add to dictionary for later
+            firework.appendChild(particle);//add to firework div
+        }
+        launchCluster(firework);//launch from bottom
+
+    }
+    function launchCluster(firework){
+        firework.classList.add('animate');//somehow move the whole dive of particles up in a curve
+        explode(firework);//call explode to make particles scatter
+    }
+    function explode(firework){
+        for(let i = 0; i < fireworks[firework].length(); i++){//for every particle make go a random direction give slight curve
+            fireworks[firework][i].classList('explode');
+        }
+        //somehow delete the firework after and the particles and the entry in the dictionary
+    }
+    createCluster();
 
 }
 function createHearts(){

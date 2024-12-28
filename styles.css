@@ -142,7 +142,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     color: #8f0909;
 }
 #days-together.night h2, #makeMeHappy.night, #nextButton.night, #bucket-list-container.night, #bucketList.night{
-    color: #9539eb;
+    color: #610ba7;
 }
 #days-together.bright h2, #makeMeHappy.bright, #nextButton.bright, #bucket-list-container.bright, #bucketList.bright{
     color: #c00e0e;
@@ -311,9 +311,9 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 #bottom-image-container.night {
     position: fixed;
-    bottom: 30px;
-    left: -150px;
-    width: 60%;
+    bottom: 300px;
+    left: -50px;
+    width: 40%;
     z-index: 1;
 }
 #bottom-image-container.night img {
@@ -324,9 +324,9 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 #bottom-image-container2.night {
     position: fixed;
-    bottom: 0px;
-    right: -100px;
-    width: 50%;
+    bottom: 300px;
+    right: -40px;
+    width: 40%;
     z-index: 1;
 }
 #bottom-image-container2.night img {
@@ -337,7 +337,7 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
 }
 #random-image.night{
     position: absolute;
-    width: 40%;
+    width: 80px;
     z-index: 11;
 }
 #random-image.night img{
@@ -502,6 +502,14 @@ button, #make-happy-button, #audio-container, #bucket-list-container, #image-sli
     #sliderImage:hover{
         transition: 0.5s;
         transform: scale(1.24);
+    }
+    #bottom-image-container.winter {
+        left: -11px;
+        bottom: 46px;
+    }
+    #bottom-image-container2.winter {
+        bottom: 82px;
+        right: -36px;
     }
     #bottom-image-container.winter {
         left: -11px;
